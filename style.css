@@ -1,0 +1,89 @@
+/* ========== CUSTOM COLORS ========== */
+:root {
+  --main-bg-color: #EAF3FF; /* background */
+  --main-font-color: #333333; /* text color */
+  --accent-color: #2D5BE3; /* default font/header highlight */
+}
+
+/* ========== GLOBAL STYLES ========== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: Arial, sans-serif;
+  background: var(--main-bg-color);
+  color: var(--main-font-color);
+  padding: 30px;
+  border: 3px solid;
+  MARGIN:20PX;
+  
+  
+}
+h1, h2, h3 { color: var(--accent-color); }
+p { line-height: 1.5; margin-bottom: 15px; }
+
+/* ========== NAVIGATION ========== */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-weight: bold;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* ========== POLAROID GRID ========== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 in a line */
+  gap: 30px;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+/* Polaroid Card */
+.polaroid {
+  background: var(--polaroid-color, white); /* custom color per card */
+  padding: 10px 10px 25px 10px; /* top/right/left/bottom space */
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  text-align: center;
+  transition: transform 0.2s;
+  width: 200px; /* same size */
+}
+.polaroid:hover { transform: scale(1.05); }
+
+.polaroid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 4px solid var(--accent-color);
+  border-radius: 5px;
+}
+
+.polaroid p {
+  margin-top: 10px;
+  font-weight: bold;
+  color: var(--accent-color);
+  font-size: 1rem;
+}
+
+/* ========== FEEDBACK LINK ========== */
+.form-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: var(--accent-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.form-link:hover { opacity: 0.8; }
+
+/* ========== FOOTER ========== */
+footer { text-align: center; margin-top: 30px; }
